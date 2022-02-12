@@ -6,3 +6,5 @@ def logic_calc(self, operation):
     
 def update():
        pass
+
+
