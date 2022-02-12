@@ -1,6 +1,5 @@
-from operator import length_hint
 from tkinter import *
-import tkinter
+
 
 
 window = Tk()      
@@ -20,7 +19,7 @@ txt.focus()
 def commands(_):
     global formula
     formula = f'{txt.get()} = {str(eval(txt.get()))}'
-    txt.delete(0, tkinter.END)
+    txt.delete(0, END)
     update()
     
 
