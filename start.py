@@ -7,7 +7,9 @@ from commands import *
 def start():
     while True:
         user_enter = from_user()
-        result = user_result()
+        result = product(user_enter)
+        message = user_result(user_enter, result)
+        print(message)
         action = input('Завершить программу? Y/N ').lower()
         if action == 'y':
             break
