@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 window = Tk()      
 window.title("Калькулятор выходного дня")
 window["bg"] = "#000"
@@ -22,8 +21,6 @@ def commands(any_char):
         formula = ""
     elif any_char == "DEL":
         formula = formula[0:-1]
-    elif any_char == "X^2":
-        formula = str((eval(formula))**2)
     elif any_char == "=":
         formula = str(eval(formula))
     else:
