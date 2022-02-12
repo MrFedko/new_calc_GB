@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter
 
 
 window = Tk()      
@@ -17,7 +18,8 @@ txt.place(x=50, y=101)
 txt.focus() 
 def commands(_):
     global formula
-    formula = str(eval(txt.get()))
+    formula = f'{txt.get()} = {str(eval(txt.get()))}'
+    txt.delete(0, tkinter.END)
     update()
     
 
