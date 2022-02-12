@@ -1,3 +1,4 @@
+from operator import length_hint
 from tkinter import *
 import tkinter
 
@@ -5,16 +6,16 @@ import tkinter
 window = Tk()      
 window.title("Калькулятор выходного дня")
 window["bg"] = "#555"
-window.geometry("400x200+200+200")
+window.geometry("400x200+500+300")
 window.resizable(False, False)
 
 formula = "0"
-text_bar = Label(window, text="Что посчитать?", font=("Times New Roman", 21, "bold"))
+text_bar = Label(window, text="Что посчитать?", font=("Times New Roman", 21, "bold"), bg="#555")
 text_bar.place(x=50, y=51)
 
 
-txt = Entry(window,width=10)
-txt.place(x=50, y=101) 
+txt = Entry(window)
+txt.place(x=50, y=101, width=250, height = 25) 
 txt.focus() 
 def commands(_):
     global formula
